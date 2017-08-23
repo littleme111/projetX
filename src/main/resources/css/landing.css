@@ -1,9 +1,10 @@
 html {
-    margin:0;
-    padding:0;
-    background: url("/resources/images/landing0.jpg") no-repeat center fixed;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
+    height: 100%;
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*background: url("/resources/images/0.jpg") no-repeat center fixed;*/
+    /*-webkit-background-size: cover; !* pour anciens Chrome et Safari *!*/
+    /*background-size: cover; !* version standardisée *!*/
 }
 
 body{

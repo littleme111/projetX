@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,8 +18,34 @@
 </head>
 <body>
 <%@include file="nav.jsp" %>
-<p>Page Login</p>
 
+
+
+<div class="container-fluid col-10 col-lg-10 cols-xs-10 col-sm-10 offset-1  inscription">
+
+    <div class="card ">
+        <h3 class="card-header card-primary">Login :</h3>
+
+        <form:form method="POST" action="register" modelAttribute="user">
+        <div class="card-block">
+
+            <div class="form-group">
+                <form:input path="pseudo" class="form-control" placeholder="Pseudo" type="text"/>
+            </div>
+            <div class="form-group">
+                <form:input path="password" class="form-control" placeholder="Mot de Passe" type="password"/>
+            </div>
+            <a href="/reset"><button class="btn btn-primary pull-left" type="button">Identifiants Oubliés</button></a>
+            <a href="/register"><button class="btn btn-primary pull-left" type="button">Inscription</button></a>
+            <button class="btn btn-success  float-right" type="submit">Connexion</button>
+        </div>
+
+
+    </div>
+
+</div>
+
+</form:form>
 
 
 <%@include file="footer.jsp" %>

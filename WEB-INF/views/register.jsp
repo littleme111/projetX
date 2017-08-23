@@ -17,43 +17,48 @@
     <title>Projet-X | Register</title>
 </head>
 <body>
+
 <%@include file="nav.jsp" %>
-<p>Register</p>
 
-<form:form method="POST" action="register" modelAttribute="user">
-    <table class="form-group">
 
-        <tr class="form-control">
-            <td>Prenom : </td>
-            <td><form:input path="fName"/></td>
-        </tr>
-        <tr class="form-control">
-            <td>Nom : </td>
-            <td><form:input path="lName"/></td>
-        </tr>
-        <tr class="form-control">
-            <td>Pseudo : </td>
-            <td><form:input path="pseudo"/></td>
-        </tr>
-        <tr class="form-control">
-            <td>E-mail : </td>
-            <td><form:input path="email"/></td>
-        </tr>
-        <tr class="form-control">
-            <td>Mot de Passe</td>
-            <td><form:input path="password"/></td>
-        </tr>
-        <tr class="form-control">
-        <td>Confirmer : </td>
-        <td><form:input path="password2"/></td>
-        </tr>
-        <tr class="form-control">
-            <td>Competences : </td>
-            <td><form:input path="competences"/></td>
-        </tr>
-    </table>
-    <button type="submit">Valider</button>
+<div class="container col-10 col-lg-10 cols-xs-10 col-sm-10 offset-1 inscription">
+
+    <div class="card ">
+        <h3 class="card-header card-primary">Inscription :</h3>
+
+        <form:form method="POST" action="register" modelAttribute="user">
+        <div class="card-block">
+            <div class="form-group ">
+                <form:input path="fName" class="form-control" placeholder="Prenom" type="text"/>
+            </div>
+            <div class="form-group">
+                <form:input path="lName" class="form-control" placeholder="Nom" type="text"/>
+            </div>
+            <div class="form-group">
+                <form:input path="pseudo" class="form-control" placeholder="Pseudo" type="text"/>
+            </div>
+            <div class="form-group">
+                <form:input path="email" class="form-control" placeholder="E-mail" type="text"/>
+            </div>
+
+            <div class="form-group">
+                <form:input path="password" class="form-control" placeholder="Mot de Passe" type="password"/>
+            </div>
+            <div class="form-group">
+                <form:input path="password2" class="form-control" placeholder="Confirmer" type="password"/>
+            </div>
+                <a href="/reset"><button class="btn btn-primary pull-left" type="button">Identifiants Oubliés</button></a>
+                <a href="/login"><button class="btn btn-primary pull-left" type="button">Connexion</button></a>
+                <button class="btn btn-success  float-right" type="submit">Inscription</button>
+        </div>
+
+
+    </div>
+
+</div>
+
 </form:form>
+
 <%@include file="footer.jsp" %>
 
 </body>

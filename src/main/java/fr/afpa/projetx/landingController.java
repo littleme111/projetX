@@ -11,7 +11,7 @@ import fr.afpa.projetx.models.user;
 public class landingController {
 
     @RequestMapping("/")
-    public ModelAndView landingPage(){
+    public ModelAndView landingPage(@ModelAttribute("user") user user){
         ModelAndView mnv = new ModelAndView("landing");
         return mnv;
     }
@@ -24,7 +24,7 @@ public class landingController {
     }
 
     @RequestMapping("/login")
-    public ModelAndView login(){
+    public ModelAndView login(@ModelAttribute("user") user user){
         ModelAndView mnv = new ModelAndView("login");
         return mnv;
     }
@@ -47,6 +47,10 @@ public class landingController {
         return mnv;
     }
 
-
+    @RequestMapping("/reset")
+    public ModelAndView reset(){
+        ModelAndView mnv = new ModelAndView("reset");
+        return mnv;
+    }
 
 }
